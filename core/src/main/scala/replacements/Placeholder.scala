@@ -1,4 +1,4 @@
-package cz.matejcerny.replacements
+package replacements
 
 opaque type Placeholder = String
 

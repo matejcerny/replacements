@@ -1,7 +1,20 @@
 import Dependencies.*
 
-ThisBuild / organization := "cz.matejcerny"
 ThisBuild / scalaVersion := Versions.Scala3
+
+inThisBuild(List(
+  organization := "com.github.matejcerny",
+  homepage := Some(url("https://github.com/matejcerny/replacements")),
+  licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+  developers := List(
+    Developer(
+      "matejcerny",
+      "Matěj Černý",
+      "cerny.matej@gmail.com",
+      url("https://matejcerny.cz")
+    )
+  )
+))
 
 lazy val root = (project in file("."))
   .settings(
@@ -16,6 +29,6 @@ lazy val root = (project in file("."))
 lazy val core = project
   .in(file("core"))
   .settings(
-    name := "core",
-    libraryDependencies ++= Testing,
+    name := "replacements-core",
+    libraryDependencies ++= Testing
   )

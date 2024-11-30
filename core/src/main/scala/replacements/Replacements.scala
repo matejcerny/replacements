@@ -1,4 +1,4 @@
-package cz.matejcerny.replacements
+package replacements
 
 import scala.annotation.targetName
 

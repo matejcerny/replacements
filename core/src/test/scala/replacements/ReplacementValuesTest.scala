@@ -1,6 +1,6 @@
-package cz.matejcerny.replacements
+package replacements
 
-import cz.matejcerny.replacements.ReplacementValues.*
+import ReplacementValues.*
 import org.specs2.mutable.SpecLike
 
 class ReplacementValuesTest extends SpecLike:

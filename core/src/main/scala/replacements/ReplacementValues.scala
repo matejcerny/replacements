@@ -1,4 +1,4 @@
-package cz.matejcerny.replacements
+package replacements
 
 trait ReplacementValues[T]:
   def replacements(t: T): Replacements
