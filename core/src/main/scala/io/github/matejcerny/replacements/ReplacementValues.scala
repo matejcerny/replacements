@@ -1,4 +1,4 @@
-package replacements
+package io.github.matejcerny.replacements
 
 trait ReplacementValues[T]:
   def replacements(t: T): Replacements

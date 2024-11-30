@@ -1,6 +1,5 @@
-package replacements
+package io.github.matejcerny.replacements
 
-import ReplacementValues.*
 import org.specs2.mutable.SpecLike
 
 class ReplacementValuesTest extends SpecLike:
