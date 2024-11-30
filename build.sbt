@@ -1,20 +1,19 @@
 import Dependencies.*
+import xerial.sbt.Sonatype.sonatypeCentralHost
 
 ThisBuild / scalaVersion := Versions.Scala3
+ThisBuild / versionScheme := Some("early-semver")
 
-inThisBuild(List(
-  organization := "com.github.matejcerny",
-  homepage := Some(url("https://github.com/matejcerny/replacements")),
-  licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
-  developers := List(
-    Developer(
-      "matejcerny",
-      "Matěj Černý",
-      "cerny.matej@gmail.com",
-      url("https://matejcerny.cz")
-    )
-  )
-))
+ThisBuild / organization := "io.github.matejcerny"
+ThisBuild / homepage := Some(url("https://github.com/matejcerny/replacements"))
+ThisBuild / licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
+ThisBuild / developers := List(
+  Developer("matejcerny", "Matěj Černý", "cerny.matej@gmail.com", url("https://matejcerny.cz"))
+)
+
+ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
+
+publish / skip := true
 
 lazy val root = (project in file("."))
   .settings(
