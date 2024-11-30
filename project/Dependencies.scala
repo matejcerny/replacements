@@ -13,6 +13,6 @@ object Dependencies {
   }
 
   val Testing: Seq[ModuleID] = Seq(
-    Modules.Spec2 %% "specs2-core" % Versions.Specs2 % Test,
+    Modules.Spec2 %% "specs2-core" % Versions.Specs2 % Test
   )
 }

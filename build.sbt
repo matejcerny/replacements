@@ -8,9 +8,10 @@ lazy val root = (project in file("."))
     name := "replacements",
     publish / skip := true,
     publishLocal / skip := true,
-    Compile / coverageEnabled := false,
     crossScalaVersions := Nil
   )
+  .aggregate(core)
+  .dependsOn(core)
 
 lazy val core = project
   .in(file("core"))
