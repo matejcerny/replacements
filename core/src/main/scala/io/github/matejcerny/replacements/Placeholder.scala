@@ -1,4 +1,4 @@
-package replacements
+package io.github.matejcerny.replacements
 
 opaque type Placeholder = String
 

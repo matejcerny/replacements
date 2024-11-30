@@ -1,4 +1,4 @@
-package replacements
+package io.github.matejcerny.replacements
 
 import org.specs2.mutable.SpecLike
 
