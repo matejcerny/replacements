@@ -10,7 +10,7 @@ object Options {
     "-language:implicitConversions", // Allow definition of implicit functions called views.
     "-language:postfixOps", // Allow postfix operator notation, such as 1 to 10 toList (not recommended).
     "-unchecked", // Enable additional warnings where generated code depends on assumptions.
-    "-Wunused:imports", // Warn if an import selector is not referenced.
+    "-Wunused:imports" // Warn if an import selector is not referenced.
   )
 
 }
