@@ -12,6 +12,7 @@ ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / homepage := Some(url("https://github.com/matejcerny/replacements"))
 ThisBuild / licenses := Seq(License.Apache2)
 ThisBuild / developers := List(tlGitHubDev("matejcerny", "Matěj Černý"))
+ThisBuild / sonatypeCredentialHost := Sonatype.sonatypeCentralHost
 
 lazy val root = tlCrossRootProject.aggregate(core)
 
