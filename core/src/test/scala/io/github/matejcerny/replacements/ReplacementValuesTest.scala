@@ -17,5 +17,6 @@ class ReplacementValuesTest extends SpecLike:
     val replaced = "Hello, John! You are 25 years old."
 
     myValues.replacements.substitute(toBeReplaced) must beEqualTo(replaced)
+    myValues.substitute(toBeReplaced) must beEqualTo(replaced)
     toBeReplaced.substitute(myValues) must beEqualTo(replaced)
   }

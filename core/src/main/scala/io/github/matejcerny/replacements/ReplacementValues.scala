@@ -4,8 +4,11 @@ trait ReplacementValues[T]:
   def replacements(t: T): Replacements
 
 object ReplacementValues:
-  extension [T](t: T)(using r: ReplacementValues[T]) def replacements: Replacements = r.replacements(t)
-  extension [T: ReplacementValues](string: String) def substitute(t: T): String = t.replacements.substitute(string)
+  extension [T](t: T)(using rv: ReplacementValues[T])
+    def replacements: Replacements = rv.replacements(t)
+    def substitute(string: String): String = rv.replacements(t).substitute(string)
+
+  extension [T: ReplacementValues](string: String) def substitute(t: T): String = t.substitute(string)
 
   inline def derived[T <: Product]: ReplacementValues[T] =
     (t: T) =>
