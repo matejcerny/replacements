@@ -1,29 +1,19 @@
 import Dependencies.*
-import xerial.sbt.Sonatype.sonatypeCentralHost
+
+ThisBuild / tlBaseVersion := "0.1"
+
+ThisBuild / organization := "io.github.matejcerny"
+ThisBuild / organizationName := "Matěj Černý"
+ThisBuild / startYear := Some(2024)
 
 ThisBuild / scalaVersion := Versions.Scala3
 ThisBuild / versionScheme := Some("early-semver")
 
-ThisBuild / organization := "io.github.matejcerny"
 ThisBuild / homepage := Some(url("https://github.com/matejcerny/replacements"))
-ThisBuild / licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
-ThisBuild / developers := List(
-  Developer("matejcerny", "Matěj Černý", "cerny.matej@gmail.com", url("https://matejcerny.cz"))
-)
+ThisBuild / licenses := Seq(License.Apache2)
+ThisBuild / developers := List(tlGitHubDev("matejcerny", "Matěj Černý"))
 
-ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
-
-publish / skip := true
-
-lazy val root = (project in file("."))
-  .settings(
-    name := "replacements",
-    publish / skip := true,
-    publishLocal / skip := true,
-    crossScalaVersions := Nil
-  )
-  .aggregate(core)
-  .dependsOn(core)
+lazy val root = tlCrossRootProject.aggregate(core)
 
 lazy val core = project
   .in(file("core"))
