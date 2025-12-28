@@ -26,6 +26,6 @@ myValues.substitute(toBeReplaced) // Hello, John! You are 42 years old.
 Add the library as a dependency:
 
 ```scala
-libraryDependencies += "io.github.matejcerny" %% "replacements" % "0.2.0"
+libraryDependencies += "io.github.matejcerny" %% "replacements" % "0.2.1"
 ```
 
