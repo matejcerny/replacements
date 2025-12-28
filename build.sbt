@@ -1,6 +1,6 @@
 // Publishing settings for sbt-ci-release
 ThisBuild / homepage := Some(url("https://github.com/matejcerny/sbt-config"))
-ThisBuild / licenses := List("MIT" -> url("https://opensource.org/licenses/MIT"))
+ThisBuild / licenses := Seq(License.Apache2)
 ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / developers := List(
   Developer(
