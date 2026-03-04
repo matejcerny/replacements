@@ -1,6 +1,7 @@
 # Replacements
 
 ![](https://img.shields.io/badge/Scala%203-%23de3423.svg?logo=scala&logoColor=white)
+[![Scala.js](https://www.scala-js.org/assets/badges/scalajs-1.20.0.svg)](https://www.scala-js.org)
 [![Latest version](https://maven-badges.sml.io/sonatype-central/io.github.matejcerny/replacements_3/badge.svg)](https://repo1.maven.org/maven2/io/github/matejcerny/replacements_3)
 [![Build Status](https://github.com/matejcerny/replacements/actions/workflows/ci.yml/badge.svg)](https://github.com/matejcerny/replacements/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/github/matejcerny/replacements/graph/badge.svg?token=7NFDWHSUN9)](https://codecov.io/github/matejcerny/replacements)
